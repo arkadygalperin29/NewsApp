@@ -1,5 +1,6 @@
 package space.arkady.myapplication.presentation.recycler
 
+import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import space.arkady.myapplication.domain.models.BaseItem
@@ -31,11 +32,13 @@ class BasicAdapter(private val clickListener: OnItemClickListener) :
         return when (items[position]) {
             is Date -> DateViewHolder.VIEW_TYPE
             is News -> NewsViewHolder.VIEW_TYPE
+            else -> throw IllegalStateException("Wrong view view type")
         }
     }
 
     override fun getItemCount(): Int = items.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun submitList(data: List<BaseItem>) {
         items = data
         notifyDataSetChanged()
