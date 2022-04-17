@@ -8,14 +8,14 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.SearchView
 import com.bumptech.glide.Glide
-import space.arkady.myapplication.data.models.NewsArticle
+import space.arkady.myapplication.data.models.Article
 import space.arkady.myapplication.data.models.NewsResponse
 import space.arkady.myapplication.domain.models.BaseItem
 import space.arkady.myapplication.domain.models.Date
 import space.arkady.myapplication.domain.models.News
 import space.arkady.myapplication.domain.models.NewsInfo
 
-fun List<NewsArticle>.toBaseItem(): List<BaseItem> {
+fun List<Article>.toBaseItem(): List<BaseItem> {
     val listBaseItem = mutableListOf<BaseItem>()
 
     this.forEachIndexed { index, newsArticle ->
@@ -37,7 +37,7 @@ fun List<NewsArticle>.toBaseItem(): List<BaseItem> {
                 author = newsArticle.author,
                 title = newsArticle.title,
                 description = newsArticle.description,
-                articleToUrl = newsArticle.articleUrl,
+                articleUrl = newsArticle.articleUrl,
                 urlToImage = newsArticle.urlToImage,
                 content = newsArticle.content,
                 idNews = newsArticle.source.idNews,

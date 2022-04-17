@@ -7,8 +7,8 @@ data class NewsResponse(
     @SerializedName("status")
     val status: String?,
     @SerializedName("totalResults")
-    val totalResults: Long?,
+    val totalResults: Long,
     @SerializedName("articles")
-    val articles: List<NewsArticle>,
+    val articles: List<Article>,
 
-)
+    )

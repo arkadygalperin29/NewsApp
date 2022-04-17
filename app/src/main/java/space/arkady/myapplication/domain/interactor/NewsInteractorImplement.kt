@@ -7,8 +7,8 @@ import space.arkady.myapplication.utils.toNewsInfo
 class NewsInteractorImplement(
     private val repository: NewsRepository
 ) : NewsInteractor {
-    override suspend fun getNews(searchWords: String): NewsInfo {
-        return repository.getNewsResponse(searchWords).toNewsInfo()
+    override suspend fun getNews(searchWord: String): NewsInfo {
+        return repository.getNewsResponse(searchWord).toNewsInfo()
     }
 }
 

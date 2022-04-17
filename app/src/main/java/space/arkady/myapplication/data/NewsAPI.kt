@@ -15,6 +15,6 @@ interface NewsAPI {
         @Query("sortBy") sortBy: String = "publishedAt",
         @Query("page") pageNumber: Int = 1,
         @Query("pageSize") pageSize: Int = 20,
-        @Query("sources") sources: String = "The Wall Street Journal",
-        ): NewsResponse
+        @Query("sources") sources: String = "The Wall Street Journal"
+    ): NewsResponse
 }

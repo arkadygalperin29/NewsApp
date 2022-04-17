@@ -10,7 +10,7 @@ data class News(
     val author: String?,
     val title: String,
     val description: String,
-    val articleToUrl: String?,
+    val articleUrl: String?,
     val urlToImage: String,
     val content: String?,
     val idNews: String?,

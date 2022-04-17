@@ -31,7 +31,7 @@ class NewsViewHolder(itemView: View, private val clickView: OnItemClickListener)
             itemView.descriptionNews.text = description
             itemView.textAuthorNews.text = "Author: $author"
             itemView.imageShare.setOnClickListener {
-                articleToUrl?.let { url -> clickView.onLinkButtonClickListener(url) }
+                articleUrl?.let { url -> clickView.onLinkButtonClickListener(url) }
             }
         }
     }

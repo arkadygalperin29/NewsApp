@@ -2,9 +2,9 @@ package space.arkady.myapplication.data.models
 
 import com.google.gson.annotations.SerializedName
 
-data class NewsArticle(
+data class Article(
     @SerializedName("source")
-    val source: NewsSource,
+    val source: Source,
     @SerializedName("author")
     val author: String?,
     @SerializedName("title")
@@ -18,5 +18,5 @@ data class NewsArticle(
     @SerializedName("publishedAt")
     val publishedAt: String,
     @SerializedName("content")
-    val content: String?,
+    val content: String?
 )
