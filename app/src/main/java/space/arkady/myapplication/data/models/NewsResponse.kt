@@ -3,7 +3,7 @@ package space.arkady.myapplication.data.models
 import com.google.gson.annotations.SerializedName
 
 
-data class NewsResponce(
+data class NewsResponse(
     @SerializedName("status")
     val status: String?,
     @SerializedName("totalResults")

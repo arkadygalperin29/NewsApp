@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.SearchView
 import com.bumptech.glide.Glide
 import space.arkady.myapplication.data.models.NewsArticle
-import space.arkady.myapplication.data.models.NewsResponce
+import space.arkady.myapplication.data.models.NewsResponse
 import space.arkady.myapplication.domain.models.BaseItem
 import space.arkady.myapplication.domain.models.Date
 import space.arkady.myapplication.domain.models.News
@@ -34,22 +34,21 @@ fun List<NewsArticle>.toBaseItem(): List<BaseItem> {
         }
         listBaseItem.add(
             News(
-                articleToUrl = newsArticle.articleUrl,
                 author = newsArticle.author,
-                content = newsArticle.content,
-                description = newsArticle.description,
-                publishedAt = newsArticle.publishedAt,
-                urlToImage = newsArticle.urlToImage,
                 title = newsArticle.title,
-                nameNews = newsArticle.source.nameNews,
-                idNews = newsArticle.source.idNews
+                description = newsArticle.description,
+                articleToUrl = newsArticle.articleUrl,
+                urlToImage = newsArticle.urlToImage,
+                content = newsArticle.content,
+                idNews = newsArticle.source.idNews,
+                nameNews = newsArticle.source.nameNews
             )
         )
     }
     return listBaseItem.toList()
 }
 
-fun NewsResponce.toNewsInfo(): NewsInfo {
+fun NewsResponse.toNewsInfo(): NewsInfo {
     return NewsInfo(
         this.totalResults.toString(),
         this.articles.toBaseItem()

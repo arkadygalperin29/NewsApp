@@ -8,7 +8,7 @@ class NewsInteractorImplement(
     private val repository: NewsRepository
 ) : NewsInteractor {
     override suspend fun getNews(searchWords: String): NewsInfo {
-        return repository.getNewsResponce(searchWords).toNewsInfo()
+        return repository.getNewsResponse(searchWords).toNewsInfo()
     }
 }
 

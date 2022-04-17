@@ -1,7 +1,7 @@
 package space.arkady.myapplication.domain.repository
 
-import space.arkady.myapplication.data.models.NewsResponce
+import space.arkady.myapplication.data.models.NewsResponse
 
 interface NewsRepository {
-    suspend fun getNewsResponce(searchWord:String) : NewsResponce
+    suspend fun getNewsResponse(searchWord:String) : NewsResponse
 }
