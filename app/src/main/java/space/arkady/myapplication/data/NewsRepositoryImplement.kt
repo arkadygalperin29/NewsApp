@@ -10,8 +10,7 @@ class NewsRepositoryImplement(private val api: NewsAPI) : NewsRepository {
         return withContext(Dispatchers.IO) {
             return@withContext api.getEverything(
                 query = searchWord,
-                language = "eng",
-                domains = "wsj.com",
+                language = "en"
             )
         }
     }
