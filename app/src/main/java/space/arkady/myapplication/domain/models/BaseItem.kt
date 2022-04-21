@@ -8,10 +8,9 @@ data class Date(
 
 data class News(
     val author: String?,
-    val title: String,
-    val description: String,
+    val title: String?,
+    val description: String?,
     val articleUrl: String?,
-    val urlToImage: String,
     val content: String?,
     val idNews: String?,
     val nameNews: String?

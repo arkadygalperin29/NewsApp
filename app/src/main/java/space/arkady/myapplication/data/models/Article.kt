@@ -13,8 +13,6 @@ data class Article(
     val description: String,
     @SerializedName("url")
     val articleUrl: String?,
-    @SerializedName("urlToImage")
-    val urlToImage: String,
     @SerializedName("publishedAt")
     val publishedAt: String,
     @SerializedName("content")

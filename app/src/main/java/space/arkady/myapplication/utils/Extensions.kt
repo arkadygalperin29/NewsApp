@@ -38,7 +38,6 @@ fun List<Article>.toBaseItem(): List<BaseItem> {
                 title = newsArticle.title,
                 description = newsArticle.description,
                 articleUrl = newsArticle.articleUrl,
-                urlToImage = newsArticle.urlToImage,
                 content = newsArticle.content,
                 idNews = newsArticle.source.idNews,
                 nameNews = newsArticle.source.nameNews

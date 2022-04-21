@@ -26,7 +26,6 @@ class NewsViewHolder(itemView: View, private val clickView: OnItemClickListener)
     @SuppressLint("SetTextI18n")
     override fun bindItem(item: BaseItem) {
         (item as News).apply {
-            itemView.imageNews.setImageByUrl(urlToImage)
             itemView.textTitleNews.text = title
             itemView.descriptionNews.text = description
             itemView.textAuthorNews.text = "Author: $author"
