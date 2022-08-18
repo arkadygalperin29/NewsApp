@@ -11,11 +11,3 @@ class NewsInteractorImplement(
         return repository.getNewsResponse(searchWords).toNewsInfo()
     }
 }
-
-/*
-fun NewsResponce.toNewsInfo(): NewsInfo {
-    return NewsInfo(
-        this.totalResults.toString(),
-        this.articles.toBaseItem()
-    )
-}*/

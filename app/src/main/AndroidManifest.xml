@@ -9,7 +9,7 @@
         android:name=".presentation.KoinApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.Material3.Light.NoActionBar">
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true">
